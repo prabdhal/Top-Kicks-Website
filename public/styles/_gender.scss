@@ -1,0 +1,42 @@
+
+.gender-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #fff;
+  z-index: 2;
+  padding: 4% 0 4% 0;
+  scroll-behavior: smooth;
+}
+
+.gender-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+}
+
+.model {
+  max-width: 450px;
+  transition: 250ms ease-in;
+}
+.model:hover {
+  opacity: 0.5;
+  transform: scale(1.01);
+}
+
+.gender-text {
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+}
+
+#gender {
+  height: 100px;
+}

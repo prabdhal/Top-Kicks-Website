@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <%- include('./partials/nav.ejs') %>
+
+  <section class="login-section">
+    <form action="" method="POST" class="login-form">
+      <h3 class="section-title">Register</h3><br><br>
+      <%- include('./partials/messages.ejs') %>
+      <label for="firstName" class="login-label">First Name</label>
+      <input type="text" name="firstName" id="firstName" class="account-input" placeholder="First Name" required>
+      <br>
+      <label for="lastName" class="login-label">Last Name</label>
+      <input type="text" name="lastName" id="lastName" class="account-input" placeholder="Last Name" required>
+      <br><br>
+      <label for="email" class="login-label">Email Address</label>
+      <input type="email" name="email" id="email" class="account-input" placeholder="email" required>
+      <br>
+      <label for="password" class="login-label">Password</label>
+      <input type="password" name="password" id="password" class="account-input" placeholder="password" required>
+      <br>
+      <a class="btn-container" href="/account-login"><button class="forgot-password-btn">Forgot My Password</button></a>
+      <button class="account-login-btn btn-container">Register</button>
+    </form>
+
+    <div class="login-info-container">
+      <h3 class="section-title">Get Bonus Points As A Member</h3><br><br>
+      <p class="account-info-title">Join the membership program now</p>
+      <li class="account-info-text">Get exclusive discounts</li>
+      <li class="account-info-text">Chance to win 1 of 10 reward cards</li>
+      <li class="account-info-text">Collect bonus points per dollar spent</li>
+      <br><p class="account-info-text">Join now to start earning points towards these amazing benefits</p><br><br>
+      <span>Already Have An Account?</span> <a href="/account-login"><button class="account-register-btn">Login</button></a>
+    </div>
+  </section>
+
+  <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <div  id="home"></div>
+  <header>
+    <div class="logo-container">
+      <h1><a class="logo-name" href="/home">Top Kicks</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/home">Home</a></li>
+        <li><a class="nav-link" href="#featured-kicks">New Features</a></li>
+        <li><a class="nav-link" href="#gender">Men's</a></li>
+        <li><a class="nav-link" href="#gender">Women's</a></li>
+        <li><a class="nav-link" href="#gender">Kids</a></li>
+        <li><a class="nav-link" href="#">Sales</a></li>
+      </ul>
+    </nav>
+    <div class="nav-btns">
+      <button class="cart-btn">
+        <i class='fas fa-cart-plus'></i>
+      </button>
+      <div class="member-btns">
+        <p class="login-name">Welcome, <%= firstName + ' ' + lastName %></p>
+        <a class="my-account-text" href="/account-logout">Log out</a>
+      </div>
+    </div>
+    <div class="menu-container">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <a href="/sfdsfs" class="hero-page-link">
+      <div class="hero-text-container">
+        <h1 class="hero-text">The Sky Is The Limit</h1>
+        <h3 class="hero-text-description">Retro Jordan HyperJumps Z36</h3>
+        <button class="hero-btn">Shop Now ></button>
+      </div>
+      <img class="hero-image" src="/imgs/hero-image-retro-nikes.png"></img>
+    </a>
+  </section>
+  <div id="featured-kicks"></div>
+  <section class="feature-section">
+    <h1 class="section-title">Featured Kicks</h1>
+    <div class="feature-container">
+      <div>
+        <img class="shoe" src="/imgs/nike-kicks1.png">
+        <h4 class="feature-text">NIKE Hyperfits A3</h4>
+        <a href="#" class="feature-text">Shop Now ></a>
+      </div>
+      <div>
+        <img class="shoe" src="imgs/nike-kicks2.webp">
+        <h4 class="feature-text">Nike JollyRancher</h4>
+        <a href="#" class="feature-text">Shop Now ></a>
+      </div>
+      <div>
+        <img class="shoe" src="/imgs/nike-kicks3.png">
+        <h4 class="feature-text">Nike Air Force 2 React</h4>
+        <a href="#" class="feature-text">Shop Now ></a>
+      </div>
+      <div>
+        <img class="shoe" src="/imgs/nike-kicks5.jpg">
+        <h4 class="feature-text">NIKE Hyperfits A3</h4>
+        <a href="#" class="feature-text">Shop Now ></a>
+      </div>
+      <div>
+        <img class="shoe" src="imgs/jordan-kicks1.jpg">
+        <h4 class="feature-text">Nike Air Force 2 React</h4>
+        <a href="#" class="feature-text">Shop Now ></a>
+      </div>
+      <div>
+        <img class="shoe" src="imgs/jordan-kicks2.jpg">
+        <h4 class="feature-text">Jordan Retro 13</h4>
+        <a href="#" class="feature-text">Shop Now ></a>
+      </div>
+    </div>
+  </section>
+    
+  <div id="gender"></div>
+
+  <section class="gender-section">
+    <h3 class="section-title">Choose your Style</h3><br><br><br>
+    <div class="gender-container">
+      <div class="split">
+        <img class="model" src="/imgs/male-model.png" alt="male-model">
+        <h4 class="gender-text">Men's wear</h4>
+      </div>
+      <div class="split">
+        <img class="model" src="/imgs/female-model.png" alt="female-model">
+        <h4 class="gender-text">Women's wear</h4>
+      </div>
+      <div class="split">
+        <img class="model" src="/imgs/kids-model.jpg" alt="kid-models">
+        <h4 class="gender-text">Kids wear</h4>
+      </div>
+    </div>
+  </section>
+  
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

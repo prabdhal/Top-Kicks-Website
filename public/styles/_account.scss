@@ -1,0 +1,148 @@
+
+.login-section {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-evenly;
+  padding: 4% 0;
+}
+
+.login-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-label {
+  margin: 0 auto;
+}
+.account-input {
+  border: 0;
+  outline: 0;
+  border: 2px solid black;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 40px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.forgot-password-btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+  margin: 20px auto;
+  text-align: center;
+  background: transparent;
+  text-decoration: underline;
+  transition: all 200ms ease-in;
+}
+.btn-container {
+  margin: auto;
+}
+.forgot-password-btn:hover {
+  opacity: 0.5;
+}
+
+.account-login-btn {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  max-width: 150px;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 30px;
+  text-align: center;
+  transition: all 200ms ease-in;
+}
+.account-login-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.account-register-btn {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  max-width: 150px;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: all 200ms ease-in;
+}
+.account-register-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+// right side section
+
+.login-info-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-info-title {
+  font-size: 1rem;
+  line-height: 3rem;
+}
+.account-info-text {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+
+
+
+// register
+
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  margin: 1px 1px;
+  z-index: 2;
+}
+
+.task {
+  margin-left: 30px;
+}
+
+.custom-checkbox {
+  --size: 1em;
+  
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  margin-right: var(--size);
+  border: 2px solid currentColor;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+
+.task:hover .custom-checkbox {
+  transform: scale(1.2);
+  color: black;
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: black;
+  border-color: black;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.learn-more-btn {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  text-decoration: underline;
+  transition: transform 200ms ease-in-out;
+}
+.learn-more-btn:hover {
+  opacity: 0.5;
+}

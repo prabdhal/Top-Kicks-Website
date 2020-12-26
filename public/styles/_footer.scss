@@ -1,0 +1,81 @@
+
+// Subscribe Section
+.subscribe-section {
+  display: flex;
+  width: 100%;
+  padding: 2%;
+  background-color: yellowgreen;
+}
+
+.subscribe-text {
+  width: 50%;
+  font-size: 1.3rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.subscribe-form {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+.email-input {
+  border: 0;
+  outline: 0;
+  border: 2px solid black;
+  max-width: 500px;
+  height: 40px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.email-btn {
+  border: 0;
+  outline: 0;
+  color: white;
+  background-color: black;
+  width: 80px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  transition: all 200ms ease-in;
+}
+.email-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+// Footer Section
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 4%;
+}
+
+.footer-split {
+  width: 20%;
+}
+.contact-split {
+  width: 40%;
+}
+
+.footer-title {
+  line-height: 2rem;
+}
+.footer-text {
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  transition: all 200ms ease-in;
+}
+a.footer-text:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+.social-icons {
+  padding: 5px;
+}

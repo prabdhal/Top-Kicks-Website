@@ -1,0 +1,47 @@
+
+.feature-section {
+  width: 80%;
+  height: 300px;
+  padding: 4% 0;
+  overflow: hidden; 
+  margin: auto;
+}
+
+.feature-container {
+  display: inline-flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow: hidden; 
+}
+
+.feature-container div {
+  width: 200px;
+}
+
+.feature-container:hover {
+  animation-play-state: paused;
+}
+
+.shoe {
+  width: 100%;
+  object-fit: cover;
+  max-width: 170px;
+  border-radius: 50%;
+  transition: 250ms ease-in;
+}
+.shoe:hover {
+  opacity: 0.6;
+  transform: scale(1.05);
+}
+
+.feature-text {
+  position: relative;
+  top: -15%;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+#featured-kicks {
+  height: 100px;
+}

@@ -1,0 +1,156 @@
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(238, 238, 238);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+//########### LOGO ###############//
+.logo-container {
+  display: flex;
+  width: 20%;
+  margin: auto 10px;
+}
+
+.logo-name {
+  font-family: 'Lobster', cursive;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+//########### NAV-LINKS ###############//
+nav {
+  display: flex;
+  width: 60%;
+}
+
+.nav-links {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  margin: auto;
+  text-align: center;
+  list-style: none;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  transition: all 100ms ease-in;
+}
+.nav-link:hover {
+  opacity: 0.5;
+  border-bottom: 4px solid black;
+  transform: scale(1.2);
+}
+
+//########### NAV-BTNS ###############//
+.nav-btns {
+  display: flex;
+  width: 20%;
+  justify-content: flex-end;
+}
+
+.cart-btn {
+  border: 0;
+  outline: 0;
+  margin-right: 35px; 
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 150ms ease-in;
+}
+.cart-btn:hover {
+  transform: scale(1.2);
+}
+
+.fas,
+.fa-cart-plus {
+  font-size: 20px;
+}
+
+.member-btns {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.login-btn {
+  border: 0;
+  outline: 0;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 40px;
+  transition: all 200ms ease-in;
+}
+.login-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.register-btn {
+  position: absolute;
+  margin: 5px 0 0 32px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: underline;
+  transition: all 200ms ease-in;
+}
+.register-btn:hover {
+  opacity: 0.5;
+}
+
+// Menu button 
+
+.menu-container {
+  display: none;
+  outline: 0;
+  cursor: pointer;
+  z-index: 2;  
+  transition: all 1s ease-in-out;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: white;
+}
+
+.login-name {
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+.my-account-text {
+  color: black;
+  margin: auto;
+}
