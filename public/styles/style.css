@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +8,42 @@
 
 html {
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  /* height of horizontal scrollbar ← You're missing this */
+  width: 10px;
+  border: 1px solid var(black);
+  background-color: var(black);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: black;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  border: 1px solid black;
+  background: black;
+  border-radius: 10px;
 }
 
 .section-title {
@@ -261,7 +290,7 @@ header {
 }
 
 .logo-name {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   color: black;
   text-decoration: none;
   letter-spacing: 2px;
@@ -382,7 +411,9 @@ nav {
   transition: all 1s ease-in-out;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 35px;
   height: 5px;
   background-color: #333;
@@ -419,6 +450,10 @@ nav {
 .my-account-text {
   color: black;
   margin: auto;
+}
+
+.hide {
+  display: none;
 }
 
 .hero-section {
@@ -485,21 +520,34 @@ nav {
 }
 
 .feature-section {
-  width: 80%;
-  height: 300px;
+  width: 100%;
+  height: 500px;
   padding: 4% 0;
-  overflow: hidden;
-  margin: auto;
+  overflow-x: scroll;
+}
+
+.feature-section::-webkit-scrollbar {
+  display: none;
 }
 
 .feature-container {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
   gap: 30px;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.feature-container::-webkit-scrollbar {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .feature-container div {
@@ -512,7 +560,6 @@ nav {
 }
 
 .shoe {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 170px;
@@ -889,8 +936,8 @@ a.footer-text:hover {
 @media only screen and (max-width: 1050px) {
   .nav-links {
     position: absolute;
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -905,6 +952,10 @@ a.footer-text:hover {
     transition: all 1s ease-out;
     -webkit-transform: translateZ(1px);
             transform: translateZ(1px);
+    overflow-y: scroll;
+  }
+  .hide {
+    display: block;
   }
   .nav-links.open {
     right: 0%;
@@ -940,9 +991,12 @@ a.footer-text:hover {
     transition: all 0.9s ease-in-out;
   }
   li.fade {
-    padding: 50px;
+    margin-top: 100px;
     font-size: 1.5rem;
     opacity: 1;
+  }
+  li.fade:nth-child(1) {
+    margin: 0;
   }
   .nav-btns {
     display: none;
@@ -996,6 +1050,13 @@ a.footer-text:hover {
   .login-form {
     width: 100%;
     padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .footer-split,
+  .contact-split {
+    width: 50%;
   }
 }
 

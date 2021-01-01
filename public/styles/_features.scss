@@ -1,17 +1,28 @@
 
 .feature-section {
-  width: 80%;
-  height: 300px;
+  width: 100%;
+  height: 500px;
   padding: 4% 0;
-  overflow: hidden; 
-  margin: auto;
+  overflow-x: scroll; 
 }
 
+.feature-section::-webkit-scrollbar {
+  display: none;
+} 
+
 .feature-container {
-  display: inline-flex;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
   gap: 30px;
-  flex-wrap: nowrap;
-  overflow: hidden; 
+  overflow-x: scroll; 
+}
+
+.feature-container::-webkit-scrollbar {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .feature-container div {
@@ -23,7 +34,6 @@
 }
 
 .shoe {
-  width: 100%;
   object-fit: cover;
   max-width: 170px;
   border-radius: 50%;
