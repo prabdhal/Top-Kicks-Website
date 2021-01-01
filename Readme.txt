@@ -7,7 +7,7 @@ Skills Applied/Learned:
 
 - Used bycrpt library to hash passwords for user security
 
-- Used flash library to display error/success messages to user during the  vbg vregistration, subscription and login process
+- Used flash library to display error/success messages to user during the registration, subscription and login process
 
 - Used passport library for user authentication to ensure the user exists in the database
 
