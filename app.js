@@ -1,5 +1,6 @@
-require("dotenv").config();
-
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
@@ -19,7 +20,7 @@ require("./config/passport")(passport);
 // Connect to MongoDB
 mongoose
   .connect(
-    "mongodb+srv://Prab:CodingAddict24@cluster0.jtune.mongodb.net/Top-Kicks-Website?retryWrites=true&w=majority",
+    `mongodb+srv://Prab:CodingAddict24@cluster0.jtune.mongodb.net/Top-Kicks-Website?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
