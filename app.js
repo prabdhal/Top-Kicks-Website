@@ -18,10 +18,13 @@ require("./config/passport")(passport);
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.DB_CONNECT, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://Prab:CodingAddict24@cluster0.jtune.mongodb.net/Top-Kicks-Website?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log("Connected to MongoDB..."))
   .catch((err) => console.log(err));
 
@@ -38,7 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 // Express Session
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: "secret",
     resave: false,
     saveUninitialized: false,
   })
