@@ -4,14 +4,11 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 
 // Import Routes & Schemas
-const User = require("./models/user");
-const Subscribe = require("./models/subscribe");
 const userRoute = require("./routes/users");
 const indexRoute = require("./routes/index");
 

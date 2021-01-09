@@ -2,10 +2,9 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs"); // helps hash passwords
 const passport = require("passport");
 const User = require("../models/user"); // user schema for db documentation
-const Subscribe = require("../models/Subscribe");
+const Subscribe = require("../models/subscribe");
 const {
   regValidateSchema,
-  logValidateSchema,
   subValidateSchema,
 } = require("../config/validation");
 // VALIDATION
