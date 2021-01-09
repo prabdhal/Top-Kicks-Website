@@ -11,7 +11,7 @@ const session = require("express-session");
 
 // Import Routes & Schemas
 const User = require("./models/user");
-const Subscribe = require("./models/Subscribe");
+const Subscribe = require("./models/subscribe");
 const userRoute = require("./routes/users");
 const indexRoute = require("./routes/index");
 
